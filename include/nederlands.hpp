@@ -93,6 +93,9 @@
 #define transactie_veilig transaction_safe
 #define transactie_veilig_dynamisch transaction_safe_dynamic
 
+//Aliasses for main
+extern "C" int hoofd();
+
 //Stddef alias
 #define NUL ((void*)0)
 #define afstandvan(t, m) offsetof(t, m)
@@ -175,9 +178,16 @@ using std::ngintmax_t;
 using std::ngintwzr_t;
 
 //IOstream alias
+
 namespace std
 {
-    using cuit = cout;
+    extern std::ostream& cuit;
+    
+    template <typename CharT, typename Traits>
+    std::basic_ostream<CharT, Traits>& eindr(std::basic_ostream<CharT, Traits>& os)
+    {
+        return endl(os);
+    }
 }
 
 //String alias
