@@ -194,6 +194,30 @@ namespace std
 namespace std
 {
     using koord = string;
+    
+    template <typename CharT, typename Traits, typename Allocator>
+    std::basic_istream<CharT, Traits>& krijgregel(std::basic_istream<CharT, Traits>& input, std::basic_string<CharT, Traits, Allocator>& str, CharT delim)
+    {
+        return std::getline(input, str, delim);
+    }
+    
+    template <typename CharT, typename Traits, typename Allocator>
+    std::basic_istream<CharT, Traits>& krijgregel(std::basic_istream<CharT, Traits>& input, std::basic_string<CharT, Traits, Allocator>& str)
+    {
+        return std::getline(input, str);
+    }
+    
+    template <typename CharT, typename Traits, typename Allocator>
+    std::basic_istream<CharT, Traits>& krijgregel(std::basic_istream<CharT, Traits>&& input, std::basic_string<CharT, Traits, Allocator>& str, CharT delim)
+    {
+        return std::getline(input, str, delim);
+    }
+    
+    template <typename CharT, typename Traits, typename Allocator>
+    std::basic_istream<CharT, Traits>& krijgregel(std::basic_istream<CharT, Traits>&& input, std::basic_string<CharT, Traits, Allocator>& str)
+    {
+        return std::getline(input, str);
+    }
 }
 
 #endif // NEDERLANDS_HPP_INCLUDED
