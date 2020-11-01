@@ -12,7 +12,7 @@
 #define en_gel and_eq
 #define atomisch_annuleer atomic_cancel
 #define atomisch_bedijf atomic_commit
-#define atomisch_geenexcept atomic_noexcept
+#define atomisch_geenuitzonder atomic_noexcept
 #define biten bitand
 #define bitof bitor
 #define breek break
@@ -48,7 +48,7 @@
 #define aanpasbaar mutable
 #define naamruimte namespace
 #define nieuw new
-#define geenexcept noexcept
+#define geenuitzonder noexcept
 #define niet not
 #define niet_gel not_eq
 #define nulwzr nullptr
